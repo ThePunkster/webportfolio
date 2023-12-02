@@ -1,0 +1,373 @@
+body {
+  background-color: #110D0E;
+  background-image: url(img/purple.png);
+}
+
+.container {
+  display: flex;
+}
+
+.column {
+  padding: 20px;
+}
+
+.column-left {
+  flex-basis: 30%;
+  /* Ajusta el ancho de la columna izquierda */
+  border-radius: 8px;
+  top: 20px;
+  /* Puedes ajustar esta distancia para definir cuándo se vuelve fija */
+}
+
+.card {
+  height: 400px;
+  width: 320px;
+  background-color: rgba(209, 94, 184, 0.041);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 20px;
+  -webkit-box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+  box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card img {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  margin-left: 25%;
+  margin-top: -10%;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.card-name {
+  font-size: 40px;
+  color: #fff;
+  font-weight: lighter;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-email {
+  font-size: 16px;
+  color: #eee7e7;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  margin-bottom: 10px;
+}
+
+/* Estilos CSS */
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  /* Cambiamos la dirección del flexbox a columna */
+  align-items: center;
+  /* Alineamos verticalmente los elementos en el centro */
+  margin-left: 15%;
+}
+
+.social-link {
+  text-decoration: none;
+  color: #999999;
+  background-color: #e6e6e623;
+  background-color: rgba(209, 94, 184, 0.041);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s;
+  /* Agregamos una transición a todas las propiedades */
+  position: relative;
+  /* Añadimos posición relativa para controlar z-index */
+  margin-left: 5px;
+  /* Añadimos margen izquierdo a cada elemento */
+  margin-right: 5px;
+  /* Añadimos margen derecho a cada elemento */
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+  /* Escalamos el elemento en un 10% en el hover */
+  color: #fff;
+  /* Cambiamos el color del texto a blanco en el hover */
+  z-index: 1;
+  /* Aseguramos que el texto quede por encima del desenfoque */
+}
+
+.social-link:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: linear-gradient(to bottom, rgba(209, 94, 184, 1), rgba(209, 94, 184, 0));
+  opacity: 0.5;
+  filter: blur(20px);
+}
+
+/*columna derechea */
+.column-right {
+  flex-basis: 70%;
+  /* Ajusta el ancho de la columna derecha */
+  background-color: rgba(209, 94, 184, 0.041);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 8px;
+  margin-top: 2%;
+}
+
+.column-right h2 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: lighter;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project h2 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: lighter;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project img {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  margin-left: 25%;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.project p {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-info {
+  width: 60%;
+  height: auto;
+  background-color: #110d0e77;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto 0;
+  /* Margen de 10px arriba, margen automático horizontal, sin margen abajo */
+
+}
+
+
+.project-info p {
+  color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.project-date {
+  width: 12%;
+  height: auto;
+  background-color: #110d0e77;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  /* Agregamos margen automático para centrar horizontalmente */
+}
+
+
+.project-date p {
+  color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.project hr {
+  width: 50%;
+  /* Ancho del 50% del contenedor padre */
+  height: 2px;
+  /* Altura de 3px */
+  background-color: #ffffff;
+  /* Color de fondo */
+  margin: 20px auto;
+  /* Margen automático vertical y horizontal */
+  border-radius: 5px;
+  /* Esquinas redondeadas */
+}
+
+.back-to-top {
+  /* Colores */
+  background-color: #110d0e77;
+  /* Color de fondo */
+  color: white;
+  /* Color del texto */
+
+  /* Tamaño */
+  padding: 10px 20px;
+  /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+  font-size: 16px;
+  /* Tamaño de la fuente */
+
+  /* Bordes */
+  border: none;
+  /* Quita el borde predeterminado */
+  border-radius: 5px;
+  /* Borde redondeado */
+
+  /* Quita el efecto 3D (sombra) */
+  box-shadow: none;
+
+  /* Otros estilos */
+  cursor: pointer;
+  /* Cambia el cursor al pasar por encima del botón */
+  outline: none;
+  /* Quita el contorno al hacer clic */
+
+  width: 5%;
+  height: auto;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  /* Agregamos margen automático para centrar horizontalmente */
+}
+
+
+.back-to-top:hover {
+  background-color: #352650a2;
+  /* Cambia el color de fondo del botón al pasar el cursor */
+}
+
+.column-right a{ 
+  text-decoration: none; /* Quita el subrayado */
+  color: #eee7e7;
+  font-size: 16px;
+  background-color: #110d0e77; /* Quita el fondo blanco */
+  width: 7%;
+  height: 4%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  /* Agregamos margen automático para centrar horizontalmente */
+}
+
+.column-right a:hover {
+  background-color: #352650a2;
+  /* Cambia el color de fondo del botón al pasar el cursor */
+}
+
+
+/* DO NOT MOVE THIS, THIS FOR MOBILE VIEW */
+@media screen and (max-width: 768px){
+
+  body{
+    background-color: #110D0E;
+    background-image: url(img/purple.png); /* You can move this one tho, page background*/
+    width: auto;
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .column-right {
+    order: 2;  
+    width: 90%;
+    height: auto;
+  }
+
+  .column-left {
+   order: 1;
+  }
+
+  .project-info {
+    width: 100%;
+    height: auto;
+    background-color: #110d0e77;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 0;
+    /* Margen de 10px arriba, margen automático horizontal, sin margen abajo */
+  
+  }
+
+
+  .project-date {
+    width: 50%;
+    height: auto;
+    background-color: #110d0e77;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    /* Agregamos margen automático para centrar horizontalmente */
+  }
+
+  .project img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+  }
+
+
+}
